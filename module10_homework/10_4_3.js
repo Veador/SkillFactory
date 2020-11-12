@@ -6,3 +6,8 @@ while (inputL >= 0) {
     --inputL
 }
 console.log('Строка: '+ output);
+
+// Интересный способ перевернуть строку :) всё работает верно, задание засчитала. Но есть более простое и быстрое решение:
+
+let string = 'Hello';
+let reversedString = string.split('').reverse().join('');
