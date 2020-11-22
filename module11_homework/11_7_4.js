@@ -1,16 +1,12 @@
-let min = 1;
-let max = 10;
-const intervalId = (min,max) => {
-    if (min<=max) {
-        console.log(min)
-        min++
-    } else {
-        clearInterval(intervalId)
-    }
-};
-setInterval(intervalId, 1000, min, max);
+const printNumbers = (min,max) => {
+    let current = min;
 
-//пока не получается
-
-
-
+    let timerId = setInterval(function(){
+        console.log(current);
+        if (current==max){
+            clearInterval(timerId);
+        }
+        current++;
+    },1000);
+}
+printNumbers (5,15);
