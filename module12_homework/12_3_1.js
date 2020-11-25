@@ -4,24 +4,18 @@
 const city = {
     city: "Moscow",
     population: 15000000
-   }
+   };
 
-const citizen = Object.create(city)
-citizen.name = "Иван"
-citizen.age = "32"
+const citizen = Object.create(city); //написал через  прототип для наглядности
+citizen.name = "Иван";
+citizen.age = "32";
 
-// let output = (city) => {
-//     for (let key in city) {
-//         if(city.hasOwnProperty(key)){
-//             console.log(key+" : "+city[key])
-//         }
-//     }
-// }
+const outputCitizen = (citizen) => {
+    for(let key in citizen){
+        if(citizen.hasOwnProperty(key)){
+           console.log(key+" : "+citizen[key]);
+        }
+    }
+};
 
-// for (let key in citizen) {
-
-//     // выводим все названия свойств
-//     console.log(citizen[key]);
-// }
-
-console.log(citizen.name);
+outputCitizen(citizen); //надеюсь, я правильно понял, что нужно наличие отдельной функции
