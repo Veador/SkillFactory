@@ -2,5 +2,6 @@
 
 const makeObj = (protoName) => {
     const obj = Object.create(protoName);
+    console.log(Object.getPrototypeOf(obj))
 }
-console.log(makeObj(null));
+makeObj(null);
