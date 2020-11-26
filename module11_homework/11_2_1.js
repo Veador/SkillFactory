@@ -1,19 +1,28 @@
 let M = [1,'d',5,0,null,3,4,12,'2',66,0,5];
-let nulls = 0, odds = 0, evens = 0;
-M.forEach(getAmountOfNumbers);
-console.log('Количество нулей: '+ nulls);
-console.log('Количество чётных чисел: '+ evens);
-console.log('Количество нечётных чисел: '+ odds);
+
+function countEvenOdd(array) {
+    let nulls = 0, odds = 0, evens = 0;
+    array.forEach(getAmountOfNumbers);
+    console.log('Количество нулей: '+ nulls);
+    console.log('Количество чётных чисел: '+ evens);
+    console.log('Количество нечётных чисел: '+ odds);
 
 
-function getAmountOfNumbers(item) {
-    if (typeof(item)==='number'){
-        if (item===0) {
-            ++nulls;
-        } else if (item % 2 === 0) {
-            ++evens;
-        } else {
-            ++odds;
+    function getAmountOfNumbers(item) {
+        if (typeof(item)==='number' && !isNaN(item)){
+            if (item===0) {
+                ++nulls;
+            } else if (item % 2 === 0) {
+                ++evens;
+            } else {
+                ++odds;
+            }
         }
     }
 }
+
+countEvenOdd(M);
+
+// Функция написана не совсем верно. В текущем виде она не универсальна, её нельзя использовать для подсчета кол-ва элементов в разных массивах. Массив должен передаваться в функцию в качестве параметра. Кроме того, переменные-счетчики и вывод результата должны быть частью функции. 
+// Также есть недочет при проверке элементов: не учтены значения NaN. Эти значения имеют тип number, поэтому они пройдут проверку на typeof и будут ошибочно учтены при подсчете
+// Выше исправила
