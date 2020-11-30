@@ -24,7 +24,7 @@ Charger.prototype = new Device();
 function Laptop(name, wattConsumption, isSleep){
     this.deviceName = name,
     this.wattConsumption = (isSleep===true)? wattConsumption : wattConsumption*2, 
-    this.isSleep = isSleep   //не хватило времени придумать как задействовать
+    this.isSleep = isSleep   //не хватило времени написать исппользование этого
 };
 Laptop.prototype = new Device();
 
@@ -42,4 +42,4 @@ const WattSum = (chargerState, laptopState, lampState) => {
 WattSum(1,1,1)
 
 
-//красивее не смог придумать =(
+//красивее, чем WattSum не смог придумать =(
