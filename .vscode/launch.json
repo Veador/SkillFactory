@@ -1,15 +1,19 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Launch Program",
-            "program": "${file}",
-            "request": "launch",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "type": "pwa-node"
-        }
-
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome",
+      "request": "launch",
+      "type": "pwa-chrome",
+      "url": "http://localhost:5500",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch Program",
+      "program": "${file}",
+      "request": "launch",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "pwa-node"
+    }
+  ]
 }
