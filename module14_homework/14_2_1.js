@@ -25,7 +25,6 @@ const xmlString = `
 const xmlDOM = parser.parseFromString(xmlString, "text/html");
 
 const listNode = xmlDOM.querySelector("list");
-//const studentNode = listNode.querySelector("student");
 
 let list = [];
 
